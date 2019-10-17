@@ -21,16 +21,27 @@
 
 <body>
 	<div class="container">
-		<div class="jumbotron text-center bg-info text-white">
+			
+		<div class="jumbotron text-center text-primary">
 				
-			<h1>Train Times</h1>
+			<h1>Train Schedule</h1>
+			
+			
 		</div>
 
         <div class="panel panel-info text-info">
                 <div class="panel-heading">
-                    <h3>Current Train Schedule </h3>
+					
+					<table>
+							<tr>
+							   <td><div1><h3> Current Train Schedule </h3></div></td>
+							   <td><div2 id="digital-clock" class="clock" onload="showTime()"></div></td>
+							</tr>
+						 </table>
 			<div class="panel-body">
 				<table class="table">
+						
+
 					<thead>
 						<tr class="panel panel-info text-info">
 							<th>Train Name</th>
@@ -80,7 +91,7 @@
 			</div>
 		</div>
 	</div>
-
+</div>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>

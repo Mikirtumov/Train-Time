@@ -1,3 +1,19 @@
 td{
     color: #17a2b8;
 }
+.clock {
+    color: #17a2b8;
+    font-size: 30px;
+    font-family: 'Orbitron', sans-serif;
+    padding-left: 100px;
+    letter-spacing: 7px;
+}
+.jumbotron{
+    background-image: url("../images/TrainBG.jpg");
+}
+h1{
+    color: #17a2b8;
+    text-shadow: 4px 1px 3px #282121;
+    margin-bottom: 20px;
+    font-size: 60px;
+}
