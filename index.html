@@ -9,17 +9,18 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet">
+	
 
 	<link rel="stylesheet" href="assets/css/style.css" />
 
 
-
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 </head>
 
-<body>
+<body class="background">
 	<div class="container">
 			
 		<div class="jumbotron text-center text-primary">
@@ -29,7 +30,7 @@
 			
 		</div>
 
-        <div class="panel panel-info text-info">
+        <div class="panel panel-info text-#447C80">
                 <div class="panel-heading">
 					
 					<table>
@@ -39,29 +40,47 @@
 							</tr>
 						 </table>
 			<div class="panel-body">
+					
 				<table class="table">
+					
 						
-
-					<thead>
-						<tr class="panel panel-info text-info">
-							<th>Train Name</th>
-							<th>Destination</th>
-							<th>Frequency(min)</th>
-							<th>Next Arrival</th>
-							<th>Minutes Away</th>
-						</tr>
-					</thead>
+								<thead>
+										<tr class="trth">
+											<th>Train Name</th>
+											<th>Destination</th>
+											<th>Frequency(min)</th>
+											<th>Next Arrival</th>
+											<th>Minutes Away</th>
+										</tr>
+									</thead>
+							  
+								
+				
 
 					<tbody id="add-row">
 					</tbody>
-
+				
 				</table>
+			
 			</div>
 		</div>
 
 		<div class="panel panel-info text-info">
 			<div class="panel-heading">
-				<h3>Add Train</h3>
+					<table>
+							<tr>
+							   <td><div1><h3 class="ml11">
+									<span class="text-wrapper">
+									  <span class="line line1"></span>
+									  <span class="letters">Add Train</span>
+									</span>
+								  </h3></div></td>
+							   <td><div2><button type="submit" id="new-train" class="btn btn-secondary">Submit</button></div2></td>
+							   
+							</tr>
+						 </table>
+				
+					  
 			</div>
 
 			<div class="panel-body">
@@ -86,7 +105,7 @@
 						<input type="text" class="form-control" id="frequency">
 					</div>
 
-					<button type="submit" id="new-train" class="btn btn-info" >Submit</button>
+					
 				</form>
 			</div>
 		</div>

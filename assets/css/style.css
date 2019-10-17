@@ -1,8 +1,9 @@
+
 td{
-    color: #17a2b8;
+    color: #447C80;
 }
 .clock {
-    color: #17a2b8;
+    color: #447C80;
     font-size: 30px;
     font-family: 'Orbitron', sans-serif;
     padding-left: 100px;
@@ -12,8 +13,55 @@ td{
     background-image: url("../images/TrainBG.jpg");
 }
 h1{
-    color: #17a2b8;
+    color: #447C80;
     text-shadow: 4px 1px 3px #282121;
     margin-bottom: 20px;
-    font-size: 60px;
+    font-size: 80px;
 }
+.background{
+    background-image: url("../images/bg.png");
+}
+input[type="text"]
+{
+    background: transparent;
+    border-color: rgb(71, 61, 61);
+}
+.trth{
+    font-size: 30px;
+    color: #447C80;
+}
+#add-row{
+    color: #447C80;
+    font-size: 20px;
+
+}
+.panel-body{
+    color: #447C80;
+    font-weight: bold;
+}
+
+  
+
+  .ml11 {
+    font-weight: 700;
+    font-size: 3.5em;
+    color:#447C80;
+  }
+  
+  .ml11 .text-wrapper {
+    position: relative;
+    display: inline-block;
+    padding-top: 0.1em;
+    padding-right: 0.05em;
+    padding-bottom: 0.15em;
+  }
+  
+  .ml11 .line1 { 
+    top: 0; 
+    left: 0;
+  }
+  
+  .ml11 .letter {
+    display: inline-block;
+    line-height: 1em;
+  }

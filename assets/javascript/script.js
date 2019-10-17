@@ -15,7 +15,7 @@ $(document).ready(function(){
 
     var database = firebase.database();
 
-
+    var aAudio = new Audio('./assets/sounds/train.mp3');
     var name;
     var destination;
     var firstTrain;
@@ -28,6 +28,9 @@ $(document).ready(function(){
         destination = $("#destination").val().trim();
         firstTrain = $("#first-train").val().trim();
         frequency = $("#frequency").val().trim();
+        aAudio.play();
+        aAudio.volume = 0.2;
+
 
 
         database.ref().push({
@@ -43,6 +46,7 @@ $(document).ready(function(){
     database.ref().on("child_added", function(childSnapshot) {
         
         var minAway;
+        
 
         var firstTrainNew = moment(childSnapshot.val().firstTrain, "hh:mm").subtract(1, "years");
 
@@ -59,6 +63,7 @@ $(document).ready(function(){
                 "</td><td>" + childSnapshot.val().frequency +
                 "</td><td>" + nextTrain + 
                 "</td><td>" + minAway + "</td></tr>");
+                
                 
         }, function(errorObject) {
             console.log("Errors handled: " + errorObject.code);
@@ -102,3 +107,34 @@ function showTime(){
 
 showTime();
 });
+var textWrapper = document.querySelector('.ml11 .letters');
+textWrapper.innerHTML = textWrapper.textContent.replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml11 .line',
+    scaleY: [0,1],
+    opacity: [0.5,1],
+    easing: "easeOutExpo",
+    duration: 700
+  })
+  .add({
+    targets: '.ml11 .line',
+    translateX: [0, document.querySelector('.ml11 .letters').getBoundingClientRect().width + 10],
+    easing: "easeOutExpo",
+    duration: 700,
+    delay: 100
+  }).add({
+    targets: '.ml11 .letter',
+    opacity: [0,1],
+    easing: "easeOutExpo",
+    duration: 600,
+    offset: '-=775',
+    delay: (el, i) => 34 * (i+1)
+  }).add({
+    targets: '.ml11',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
