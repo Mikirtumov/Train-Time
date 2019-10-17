@@ -138,3 +138,9 @@ anime.timeline({loop: true})
     easing: "easeOutExpo",
     delay: 1000
   });
+
+  $("#frequency").keyup(function(event) {
+    if (event.keyCode === 13) {
+        $("#new-train").click();
+    }
+});
